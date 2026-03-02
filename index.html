@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOA Gold - Mengembalikan Kejayaan dengan Emas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #996515;
+            --black: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+        
+        /* Navigation */
+        nav { background: var(--black); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--gold); }
+        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589156229687-496a31ad1d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
+                background-size: cover; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: var(--gold); }
+        .hero p { font-size: 1.2rem; max-width: 700px; }
+
+        /* Section Styling */
+        section { padding: 60px 10%; }
+        h2 { text-align: center; color: var(--dark-gold); margin-bottom: 40px; }
+
+        /* Harga Table */
+        .price-container { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 15px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background-color: var(--gold); color: white; }
+
+        /* Order Form */
+        .order-form { background: #fff; padding: 30px; border-radius: 10px; max-width: 600px; margin: 0 auto; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        
+        .btn-wa { background-color: #25D366; color: white; padding: 15px 25px; border: none; border-radius: 5px; width: 100%; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; text-decoration: none; }
+        .btn-wa i { margin-right: 10px; font-size: 1.5rem; }
+
+        /* Social Media Section */
+        .ig-placeholder { background: #eee; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-style: italic; color: #777; }
+
+        footer { background: var(--black); color: white; text-align: center; padding: 40px 0; }
+        .social-icons a { color: var(--gold); font-size: 2rem; margin: 0 15px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">EOA GOLD AGENT</div>
+    <div class="nav-links">
+        <a href="#profil">Profil</a>
+        <a href="#harga">Harga</a>
+        <a href="#order">Pesan</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Membangun Peradaban Dengan Emas</h1>
+        <p>Investasi amanah, murni 24 Karat, dan mudah dimiliki mulai dari ukuran 0.1 Gram.</p>
+        <br>
+        <a href="#order" class="btn-wa" style="width: auto; display: inline-flex;">Mulai Menabung Sekarang</a>
+    </div>
+</section>
+
+<section id="profil">
+    <h2>Company Profile</h2>
+    <div style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+            <p><strong>EOA Gold</strong> adalah logam mulia murni 24 karat (99.9%) yang diproduksi oleh PT Emas Optimasi Abadi untuk memberikan kemudahan bagi umat dalam memiliki emas.</p>
+            <p>Visi kami adalah mengembalikan kejayaan ekonomi umat melalui instrumen emas. Kami menyediakan ukuran kepingan kecil (0.1g, 0.2g, 0.5g) sehingga setiap lapisan masyarakat bisa mulai menabung tanpa hambatan biaya besar.</p>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+            <img src="https://eoagold.id/wp-content/uploads/2021/04/Logo-EOA-Gold.png" alt="EOA Gold" style="width: 100%; max-width: 300px; display: block; margin: 0 auto;">
+        </div>
+    </div>
+</section>
+
+<section id="harga" style="background: #f1f1f1;">
+    <h2>Harga Emas Hari Ini</h2>
+    <p style="text-align:center; margin-top:-30px;">Update: <span id="current-date"></span></p>
+    <div class="price-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ukuran (Gram)</th>
+                    <th>Harga Jual (IDR)</th>
+                    <th>Harga Buyback (IDR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>0.1 Gram</td><td>Rp 1xx.xxx</td><td>Rp xx.xxx</td></tr>
+                <tr><td>0.5 Gram</td><td>Rp 6xx.xxx</td><td>Rp 5xx.xxx</td></tr>
+                <tr><td>1.0 Gram</td><td>Rp 1.xxx.xxx</td><td>Rp 1.xxx.xxx</td></tr>
+            </tbody>
+        </table>
+        <p><small>*Harga sewaktu-waktu dapat berubah mengikuti pasar global.</small></p>
+    </div>
+</section>
+
+<section id="instagram">
+    <h2>Update Terkini @official.eoagold</h2>
+    <div class="ig-placeholder">
+        <p>Bagian ini akan menampilkan Feed Instagram Otomatis</p>
+    </div>
+</section>
+
+<section id="order">
+    <h2>Formulir Pemesanan</h2>
+    <div class="order-form">
+        <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Contoh: Budi Santoso">
+        </div>
+        <div class="form-group">
+            <label>Pilih Produk</label>
+            <select id="produk">
+                <option value="EOA Gold 0.1 Gram">0.1 Gram</option>
+                <option value="EOA Gold 0.5 Gram">0.5 Gram</option>
+                <option value="EOA Gold 1.0 Gram">1.0 Gram</option>
+                <option value="EOA Gold 5.0 Gram">5.0 Gram</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Jumlah Keping</label>
+            <input type="number" id="jumlah" value="1">
+        </div>
+        <button class="btn-wa" onclick="sendToWA()">
+            <i class="fab fa-whatsapp"></i> Pesan Sekarang & Bayar
+        </button>
+    </div>
+</section>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://instagram.com/official.eoagold" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2024 Agen Resmi EOA Gold. Dikelola Secara Mandiri.</p>
+</footer>
+
+<script>
+    // Set Tanggal Otomatis
+    document.getElementById('current-date').innerText = new Date().toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+    function sendToWA() {
+        const nama = document.getElementById('nama').value;
+        const produk = document.getElementById('produk').value;
+        const jumlah = document.getElementById('jumlah').value;
+        const waNumber = "628123456789"; // GANTI DENGAN NOMOR WHATSAPP ANDA
+
+        const message = `Halo Admin, saya ingin memesan EOA Gold.%0A%0ANama: ${nama}%0AProduk: ${produk}%0AJumlah: ${jumlah} keping.%0A%0AMohon info total harga dan cara pembayaran.`;
+        
+        window.open(`https://wa.me/${waNumber}?text=${message}`, '_blank');
+    }
+</script>
+
+</body>
+</html>
